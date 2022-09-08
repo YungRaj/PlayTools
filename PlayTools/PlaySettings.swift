@@ -105,7 +105,7 @@ extension Dictionary {
         if let key = settings[PlaySettings.gameWindowSizeHeight] as? CGFloat {
             return key
         }
-        return 1440
+        return 1920
     }()
 
     private static let gameWindowSizeWidth = "pc.gameWindowSizeWidth"
@@ -113,7 +113,7 @@ extension Dictionary {
         if let key = settings[PlaySettings.gameWindowSizeWidth] as? CGFloat {
             return key
         }
-        return 810
+        return 1080
     }()
 
     private static let ipadModelKey = "pc.ipadModel"
@@ -127,12 +127,6 @@ extension Dictionary {
     @objc lazy public var GET_OEM_ID: NSString = {
         if let key = settings[PlaySettings.ipadModelKey] as? NSString {
             switch key {
-            case "iPad6,7":
-                return "J98aAP"
-            case "iPad8,6":
-                return "J320xAP"
-            case "iPad13,8":
-                return "J522AP"
             case "iPhone14,2":
                 return "D63AP"
             default:
