@@ -133,11 +133,13 @@ extension Dictionary {
                 return "J320xAP"
             case "iPad13,8":
                 return "J522AP"
+            case "iPhone14,2":
+                return "D63AP"
             default:
-                return "J320xAP"
+                return "D63AP"
             }
         }
-        return "J320xAP"
+        return "D63AP"
     }()
 
     static var isGame: Bool {
