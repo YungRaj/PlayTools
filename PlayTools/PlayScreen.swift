@@ -8,8 +8,8 @@ import SwiftUI
 import AVFoundation
 
 let screen = PlayScreen.shared
-let mainScreenWidth = PlaySettings.shared.windowSizeWidth
-let mainScreenHeight = PlaySettings.shared.windowSizeHeight
+let mainScreenWidth = UIScreen.main.bounds.width
+let mainScreenHeight = UIScreen.main.bounds.height
 
 extension CGSize {
     func aspectRatio() -> CGFloat {
@@ -69,11 +69,11 @@ public final class PlayScreen: NSObject {
     @objc public static let shared = PlayScreen()
 
     @objc public static func frame(_ rect: CGRect) -> CGRect {
-        return rect.toAspectRatio()
+        return rect
     }
 
     @objc public static func bounds(_ rect: CGRect) -> CGRect {
-        return rect.toAspectRatioReversed()
+        return rect
     }
 
     @objc public static func width(_ size: Int) -> Int {
